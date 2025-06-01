@@ -1,4 +1,4 @@
-# Movieye Project
+# Laravel local env Project
 
 A Laravel + Vue.js application with PostgreSQL database and HTTPS support.
 
