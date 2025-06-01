@@ -92,9 +92,9 @@ mkcert -install
 
 # Generate certificates
 mkdir -p docker/nginx/ssl
-mkcert movieye.local
-mv movieye.local.pem docker/nginx/ssl/certificate.pem
-mv movieye.local-key.pem docker/nginx/ssl/certificate-key.pem
+mkcert myproject.local
+mv myproject.local.pem docker/nginx/ssl/certificate.pem
+mv myproject.local-key.pem docker/nginx/ssl/certificate-key.pem
 ```
 
 ### 3. Configure Local Domain
@@ -102,7 +102,7 @@ mv movieye.local-key.pem docker/nginx/ssl/certificate-key.pem
 Add the following entry to your `/etc/hosts` file:
 
 ```bash
-sudo echo "127.0.0.1 movieye.local" | sudo tee -a /etc/hosts
+sudo echo "127.0.0.1 myproject.local" | sudo tee -a /etc/hosts
 ```
 
 ### 4. Environment Setup
@@ -119,11 +119,11 @@ DB_USERNAME=postgres
 DB_PASSWORD=secret
 
 # Application Configuration
-APP_NAME=Movieye
+APP_NAME=myproject
 APP_ENV=local
 APP_KEY=
 APP_DEBUG=true
-APP_URL=https://movieye.local
+APP_URL=https://myproject.local
 
 # Docker Configuration
 DOCKER_PHP_VERSION=8.3
@@ -154,7 +154,7 @@ The setup script will:
 
 Once everything is set up, you can access the application at:
 
-- HTTPS: https://movieye.local
+- HTTPS: https://myproject.local
 - HTTP will automatically redirect to HTTPS
 
 ## Docker Services
